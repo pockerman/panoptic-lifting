@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from einops import repeat
 
-from util.transforms import trs_comp, dot
+from panoptic3d.util.transforms import trs_comp, dot
 
 
 def frustum_world_bounds(dims, intrinsics, cam2worlds, max_depth, form='bbox'):

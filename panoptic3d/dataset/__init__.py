@@ -1,8 +1,8 @@
 # Copyright (c) Meta Platforms, Inc. All Rights Reserved
 
 from pathlib import Path
-from dataset.base import BaseDataset, create_segmentation_data_sem, InconsistentBaseDataset, InconsistentSingleBaseDataset
-from dataset.panopli import PanopLiDataset, InconsistentPanopLiDataset, InconsistentPanopLiSingleDataset, create_segmentation_data_panopli, SegmentPanopLiDataset
+from panoptic3d.dataset.base import BaseDataset, create_segmentation_data_sem, InconsistentBaseDataset, InconsistentSingleBaseDataset
+from panoptic3d.dataset.panopli import PanopLiDataset, InconsistentPanopLiDataset, InconsistentPanopLiSingleDataset, create_segmentation_data_panopli, SegmentPanopLiDataset
 
 
 def get_dataset(config, load_only_val=False):

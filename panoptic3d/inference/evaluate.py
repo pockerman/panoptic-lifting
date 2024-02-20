@@ -1,6 +1,6 @@
 import argparse
 
-from dataset.preprocessing.preprocess_scannet import calculate_iou_folders, calculate_panoptic_quality_folders
+from panoptic3d.dataset.preprocessing.preprocess_scannet import calculate_iou_folders, calculate_panoptic_quality_folders
 from pathlib import Path
 
 

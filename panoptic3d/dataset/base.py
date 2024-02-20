@@ -10,10 +10,10 @@ from torch.utils.data import Dataset
 from torchvision import transforms as T
 from tqdm import tqdm
 
-from util.camera import compute_world2normscene, unproject_2d_3d
-from util.distinct_colors import DistinctColors
-from util.misc import visualize_points, EasyDict, create_box, visualize_cameras, visualize_points_as_pts
-from util.ray import get_ray_directions_with_intrinsics, get_rays, rays_intersect_sphere
+from panoptic3d.util.camera import compute_world2normscene, unproject_2d_3d
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.util.misc import visualize_points, EasyDict, create_box, visualize_cameras, visualize_points_as_pts
+from panoptic3d.util.ray import get_ray_directions_with_intrinsics, get_rays, rays_intersect_sphere
 
 
 def create_segmentation_data_base(num_semantic_classes, instance_to_semantics, num_instances):

@@ -14,14 +14,14 @@ import wandb
 import randomname
 from pytorch_lightning.strategies import DDPStrategy
 
-from util.distinct_colors import DistinctColors
-from util.misc import visualize_depth, probability_to_normalized_entropy, get_boundary_mask
-from util.warmup_scheduler import GradualWarmupScheduler
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.util.misc import visualize_depth, probability_to_normalized_entropy, get_boundary_mask
+from panoptic3d.util.warmup_scheduler import GradualWarmupScheduler
 from pytorch_lightning import seed_everything, Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger, WandbLogger
 
-from util.filesystem_logger import FilesystemLogger
+from panoptic3d.util.filesystem_logger import FilesystemLogger
 
 
 def print_traceback_handler(sig, _frame):

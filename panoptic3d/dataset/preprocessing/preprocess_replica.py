@@ -18,11 +18,11 @@ from PIL import Image
 from tqdm import tqdm
 from transforms3d.axangles import axangle2mat
 
-from dataset.preprocessing.preprocess_scannet import get_thing_semantics, get_classnames, visualize_mask_folder, \
+from panoptic3d.dataset.preprocessing.preprocess_scannet import get_thing_semantics, get_classnames, visualize_mask_folder, \
     create_validation_set, map_panoptic_coco, mmdet_export_fixes
-from util.distinct_colors import DistinctColors
-from util.misc import create_box
-from util.transforms import hmg
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.util.misc import create_box
+from panoptic3d.util.transforms import hmg
 
 from_dm_nerf_path = Path("data/replica/raw/from_dm_nerf")
 from_semantic_nerf_path = Path("data/replica/raw/from_semantic_nerf")

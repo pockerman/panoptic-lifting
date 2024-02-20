@@ -15,14 +15,14 @@ from torchvision.utils import save_image, make_grid
 from torch.utils.data import DataLoader
 from torch_scatter import scatter_mean
 
-from dataset import get_dataset, get_inconsistent_single_dataset, get_segment_dataset
-from model.loss.loss import TVLoss, get_semantic_weights, SCELoss
-from model.radiance_field.tensoRF import TensorVMSplit
-from model.renderer.panopli_tensoRF_renderer import TensoRFRenderer
-from util.distinct_colors import DistinctColors
-from trainer import create_trainer, get_optimizer_and_scheduler, visualize_panoptic_outputs
-from util.metrics import psnr, ConfusionMatrix
-from util.panoptic_quality import panoptic_quality
+from panoptic3d.dataset import get_dataset, get_inconsistent_single_dataset, get_segment_dataset
+from panoptic3d.model.loss.loss import TVLoss, get_semantic_weights, SCELoss
+from panoptic3d.model.radiance_field.tensoRF import TensorVMSplit
+from panoptic3d.model.renderer.panopli_tensoRF_renderer import TensoRFRenderer
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.trainer import create_trainer, get_optimizer_and_scheduler, visualize_panoptic_outputs
+from panoptic3d.util.metrics import psnr, ConfusionMatrix
+from panoptic3d.util.panoptic_quality import panoptic_quality
 
 torch.multiprocessing.set_sharing_strategy('file_system')  # possible fix for the "OSError: too many files" exception
 
@@ -328,7 +328,7 @@ class TensoRFTrainer(pl.LightningModule):
                 break
 
 
-@hydra.main(config_path='../config', config_name='panopli', version_base='1.2')
+@hydra.main(config_path='../../config', config_name='panopli', version_base='1.2')
 def main(config):
     trainer = create_trainer("PanopLi", config)
     model = TensoRFTrainer(config)

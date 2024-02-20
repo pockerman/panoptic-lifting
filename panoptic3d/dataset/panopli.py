@@ -11,11 +11,11 @@ from PIL import Image
 import json
 from tqdm import tqdm
 
-from dataset.base import create_segmentation_data_base, BaseDataset, process_bounding_box_dict
-from dataset.preprocessing.preprocess_scannet import get_thing_semantics
-from util.camera import compute_world2normscene
-from util.misc import EasyDict
-from util.ray import get_ray_directions_with_intrinsics, get_rays, rays_intersect_sphere
+from panoptic3d.dataset.base import create_segmentation_data_base, BaseDataset, process_bounding_box_dict
+from panoptic3d.dataset.preprocessing.preprocess_scannet import get_thing_semantics
+from panoptic3d.util.camera import compute_world2normscene
+from panoptic3d.util.misc import EasyDict
+from panoptic3d.util.ray import get_ray_directions_with_intrinsics, get_rays, rays_intersect_sphere
 
 
 class PanopLiDataset(BaseDataset):

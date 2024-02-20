@@ -14,16 +14,16 @@ from pathlib import Path
 
 from matplotlib import cm
 from transforms3d.axangles import axangle2mat
-from util.transforms import hmg, dot
+from panoptic3d.util.transforms import hmg, dot
 import torch
 import cv2
 from PIL import Image
 from tqdm import tqdm
-from dataset.preprocessing.sens_reader.SensorData import SensorData
-from util.distinct_colors import DistinctColors
-from util.metrics import ConfusionMatrix
-from util.misc import visualize_mask, create_box, get_boundary_mask
-from util.panoptic_quality import panoptic_quality, panoptic_quality_match, _panoptic_quality_compute
+from panoptic3d.dataset.preprocessing.sens_reader.SensorData import SensorData
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.util.metrics import ConfusionMatrix
+from panoptic3d.util.misc import visualize_mask, create_box, get_boundary_mask
+from panoptic3d.util.panoptic_quality import panoptic_quality, panoptic_quality_match, _panoptic_quality_compute
 
 
 def get_keyframe_indices(filenames, window_size):

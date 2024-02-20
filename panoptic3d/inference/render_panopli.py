@@ -10,12 +10,12 @@ from torch.utils.data import DataLoader
 from torchvision.utils import make_grid
 from tqdm import tqdm
 import numpy as np
-from dataset import PanopLiDataset, create_segmentation_data_panopli
-from model.radiance_field.tensoRF import TensorVMSplit
-from model.renderer.panopli_tensoRF_renderer import TensoRFRenderer
-from trainer import visualize_panoptic_outputs
-from util.camera import distance_to_depth
-from util.misc import get_parameters_from_state_dict
+from panoptic3d.dataset import PanopLiDataset, create_segmentation_data_panopli
+from panoptic3d.model.radiance_field.tensoRF import TensorVMSplit
+from panoptic3d.model.renderer.panopli_tensoRF_renderer import TensoRFRenderer
+from panoptic3d.trainer import visualize_panoptic_outputs
+from panoptic3d.util.camera import distance_to_depth
+from panoptic3d.util.misc import get_parameters_from_state_dict
 
 
 def render_panopli_checkpoint(config, trajectory_name, test_only=False):

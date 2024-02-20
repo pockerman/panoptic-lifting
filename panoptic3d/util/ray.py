@@ -2,7 +2,7 @@
 
 import torch
 
-from util.camera import _radial_and_tangential_undistort
+from panoptic3d.util.camera import _radial_and_tangential_undistort
 
 
 def create_grid(height, width):

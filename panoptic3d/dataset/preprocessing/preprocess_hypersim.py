@@ -16,11 +16,11 @@ from PIL import Image
 from tqdm import tqdm
 import os
 
-from dataset.preprocessing.preprocess_scannet import get_reduce_and_fold_map, get_thing_semantics, visualize_mask_folder, map_panoptic_coco, create_validation_set
-from util.camera import distance_to_depth
-from util.distinct_colors import DistinctColors
-from util.misc import create_box, visualize_mask
-from util.transforms import trans_mat, hmg, trs_decomp, trs_comp
+from panoptic3d.dataset.preprocessing.preprocess_scannet import get_reduce_and_fold_map, get_thing_semantics, visualize_mask_folder, map_panoptic_coco, create_validation_set
+from panoptic3d.util.camera import distance_to_depth
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.util.misc import create_box, visualize_mask
+from panoptic3d.util.transforms import trans_mat, hmg, trs_decomp, trs_comp
 
 preview_path = Path("/rhome/ysiddiqui/ml-hypersim/contrib/99991/downloads")
 multiframe_path = Path("/rhome/ysiddiqui/ml-hypersim/contrib/99991/multiframe")

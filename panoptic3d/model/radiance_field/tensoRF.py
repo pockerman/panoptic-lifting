@@ -26,7 +26,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-from util.misc import get_parameters_from_state_dict
+from panoptic3d.util.misc import get_parameters_from_state_dict
 
 
 class TensorVMSplit(nn.Module):

@@ -29,9 +29,9 @@ from torch import nn
 import torch.nn.functional as F
 from torch_efficient_distloss import eff_distloss
 
-from util.distinct_colors import DistinctColors
-from util.misc import visualize_points
-from util.transforms import tr_comp, dot, trs_comp
+from panoptic3d.util.distinct_colors import DistinctColors
+from panoptic3d.util.misc import visualize_points
+from panoptic3d.util.transforms import tr_comp, dot, trs_comp
 
 
 class TensoRFRenderer(nn.Module):
